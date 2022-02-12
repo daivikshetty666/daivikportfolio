@@ -1,0 +1,37 @@
+<!-- 
+Name : Daivik Shetty
+Student Id: 301167163 -->
+
+
+<!-- main page section -->
+<main >
+    <% if (title == "Home") { %>
+    <main>
+        <div class="bgcolor">
+            <%- include ../pages/homepage.ejs %>
+        </div>
+    </main>
+    <% } else { %>
+    <main class="container-fluid" >
+        <% if (title == "About Me") { %>
+        <div class="jumbotron" style="background-color:#171d25">
+            <%- include ../pages/aboutpage.ejs %>
+        </div>
+        <%  } else if (title == "Projects") {  %>
+        <div class="jumbotron" style="background-color:#171d25">
+            <%- include ../pages/projectpage.ejs %>
+        </div>
+        <%  } else if (title == "Services") {  %>
+        <div class="jumbotron" style="background-color:#171d25">
+            <%- include ../pages/servicepage.ejs %>
+        </div>
+        <%  } else {  %>
+        <div class="jumbotron" style="background-color:#171d25">
+            <div class="jumbotron" style="background-color:#11151a">
+            <%- include ../pages/contactpage.ejs %>
+        </div>
+        </div>
+    <% } %>
+    </main>
+    <% } %>
+</main>
