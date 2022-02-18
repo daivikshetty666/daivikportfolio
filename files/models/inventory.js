@@ -17,3 +17,5 @@ let inventoryModel = mongoose.Schema(
         collection: "inventory"
     }
 );
+
+module.exports = mongoose.model('inventory', inventoryModel);

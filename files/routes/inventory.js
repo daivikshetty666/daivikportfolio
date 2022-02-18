@@ -1,10 +1,9 @@
 let express = require('express');
 let router = express.Router();
+let inventoryController = require('../controllers/inventory')
 
-/* GET About page. */
-router.get('/', function(req, res, next) {
-    res.send('respond');
-  });
+/* GET Inventory page. */
+router.get('/', inventoryController.list);
 
   
 module.exports = router;
