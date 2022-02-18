@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-var app = require('./server/config/app');
-var debug = require('debug')('myportfolio:server');
+var app = require('./files/config/app');
+var debug = require('debug')('myportfolio:servers');
 var http = require('http');
 
 /**

@@ -11,9 +11,24 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+//Database setup
+let mongoose = require('mongoose');
+let dbURI = require('./db');
+
+
+//create connection to the database
+mongoose.connect(dbURI.URI);
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', ()=>{
+  console.log('Connected to MongoDB...');
+});
+
 
 // defining the route file
 let indexRouter = require('../routes/index');
+let inventoryRouter = require('../routes/inventory');
 let app = express();
 
 // view engine setup
@@ -30,6 +45,8 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 // use the route file into the app to deploy 
 app.use('/', indexRouter);
+app.use('/inventory', inventoryRouter);
+
 
 
 // catch 404 and forward to error handler
