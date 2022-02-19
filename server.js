@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+var dbConfig = require('./files/config/db');
 var app = require('./files/config/app');
 var debug = require('debug')('myportfolio:servers');
 var http = require('http');
@@ -11,9 +12,10 @@ var http = require('http');
 /**
  * Get port from environment and store in Express.
  */
-
+let db = dbConfig();
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
 
 /**
  * Create HTTP server.
