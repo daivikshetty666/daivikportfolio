@@ -92,7 +92,7 @@ module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
     let updatedItem = Inventory({
-        id: id,
+        _id: id,
         name: req.body.name,
         contact: req.body.contact,
         email: req.body.email
