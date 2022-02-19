@@ -74,8 +74,27 @@ Student Id: 301167163 -->
           <% } else { %>
             <li class="nav-item">
           <% } %>
-            <a class="nav-link"  href="/contact"><i style="color:#66FCF1" class="fas fa-address-book"></i> Contact Me </a>
+            <a class="nav-link"  href="/contact"><i style="color:#66FCF1" class="far fa-envelope"></i> Contact Me </a>
           </li>
+          <% if (title == "Business Contact List") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link" aria-current="page" href="/inventory/list"><i style="color:#66FCF1" class="fas fa-address-book"></i> Business Contact List </a>
+          </li>
+
+          <li class="nav-item">
+            <% if (title == "Users") { %>
+                <a class="nav-link active" href="/users">
+            <% } else { %>
+                <a class="nav-link" href="/users">
+            <% } %>            
+                <i style="color:#66FCF1" class="fas fa-user-circle"></i> Users </a>
+            </a>
+          </li>
+
+
         </ul>
       </div>
     </div>

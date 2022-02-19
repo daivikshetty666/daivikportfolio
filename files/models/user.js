@@ -23,6 +23,7 @@ let UserModel = mongoose.Schema(
                 return password && password.length > 6;
             }, 'Password needs to be longer']
         },
+        //use salt to store the result of the encryption
         salt: String,
         created: {
             type: Date,
@@ -44,7 +45,7 @@ UserModel.virtual('fullname')
         this.firstname = splitname[0] || '';
         this.lastname = splitname[1] || '';
 });
-
+// functions for encrypting the password
 // Middleware pre
 UserModel.pre('save', function(next) {
     if (this.password) {

@@ -17,4 +17,9 @@ router.get('/daivik', function(req, res, next) {
   );
 });
 
+
+//signup
+
+//signin
+
 module.exports = router;
