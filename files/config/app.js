@@ -16,6 +16,7 @@ let logger = require('morgan');
 // defining the route file
 let indexRouter = require('../routes/index');
 let inventoryRouter = require('../routes/inventory');
+let usersRouter = require('../routes/users');
 let app = express();
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 // use the route file into the app to deploy 
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
+app.use('/users', usersRouter);
 
 
 
