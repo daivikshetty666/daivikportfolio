@@ -19,4 +19,67 @@ Student Id: 301167163 -->
   <link rel='stylesheet' href='/stylesheet/app.css' />
 </head>
 
+  
+  <!-- main navbar section -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #1F2833;"><!-- created a fixed nav bar at the top of the screen -->
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/">
+        <img src="/Assets/images/logo.png" width="50" height="50" alt=""> Daivik Shetty
+      </a>
+      <!-- created a responsive toggler button that appears when the window size of the website is reduced-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+          <% if (title == "Home") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link"  href="/home"><i style="color:#66FCF1" class="fab fa-fort-awesome"></i> Home </a>
+          </li>
+
+          
+
+          <% if (title == "Projects") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/project"><i  style="color:#66FCF1" class="fas fa-tasks"></i> Projects </a>
+          </li>
+
+          <% if (title == "Services") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link"  href="/services"><i style="color:#66FCF1" class="fas fa-laptop-code"></i> Services </a>
+          </li>
+
+          <% if (title == "About Me") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link"  href="/about"><i style="color:#66FCF1" class="fas fa-user"></i> About Me </a>
+          </li>
+
+          <% if (title == "Contact Me") { %>
+            <li class="nav-item active">
+          <% } else { %>
+            <li class="nav-item">
+          <% } %>
+            <a class="nav-link"  href="/contact"><i style="color:#66FCF1" class="fas fa-address-book"></i> Contact Me </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
 <body>

@@ -2,8 +2,6 @@
 Name : Daivik Shetty
 Student Id: 301167163
 */
-
-
 let express = require('express');
 let router = express.Router();
 let mainController = require('../controllers/index');
@@ -25,6 +23,5 @@ router.get('/services', mainController.services);
 
 /* GET Contact Us page. */
 router.get('/contact', mainController.contact);
-
 
 module.exports = router;
