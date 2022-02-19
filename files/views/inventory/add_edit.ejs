@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+<div class="jumbotron" style="background-color:#171d25">
+    <div class="jumbotron" style="background-color:#11161b">
+<br>
+<br>
+
+<!-- Content for the Add_Edit page -->
+<div class="container" style="color: rgb(195, 255, 255);">
+    <div class="row">
+        <div class="offset-md-3 col-md-6" style="text-align: center;">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST" style="color: rgb(65, 255, 255);">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+                    <label for="itemTextField">Full Name</label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter Name"
+                        name="name" 
+                        value="<%= item.name %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="QtyTextField">Contact Number</label>
+                    <input type="tel" class="form-control"
+                    id="QtyTextField"
+                    placeholder="Enter Contact No."
+                    name="contact" 
+                    value="<%= item.contact %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="statusTextField">Email Address</label>
+                    <input type="email" class="form-control"
+                    id="statusTextField"
+                    placeholder="Enter Email Id"
+                    name="email" 
+                    value="<%= item.email %>"
+                    >
+                </div>
+                <br />
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/inventory/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+<%- include ../partials/footer.ejs %>
