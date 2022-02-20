@@ -9,9 +9,19 @@ router.get('/', userController.user);
 router.get('/julio', userController.julio);
 
 
-//signup
+//signup get method
 router.get('/signup', userController.renderSignup);
+//signup post method
+router.post('/signup', userController.signup);
 
-//signin
+//signin get method
+router.get('/signin', userController.renderSignin);
+//signup post method
+router.post('/signin', userController.signin);
+
+//signout get method
+router.get('/signout', userController.signout);
+
+
 
 module.exports = router;

@@ -84,15 +84,15 @@ Student Id: 301167163 -->
             <a class="nav-link" aria-current="page" href="/inventory/list"><i style="color:#66FCF1" class="fas fa-address-book"></i> Business Contact List </a>
           </li>
 
-          <li class="nav-item">
-            <% if (title == "Users") { %>
-                <a class="nav-link active" href="/users">
+    
+
+          <li class="nav-item">  
+            <% if (typeof userName == 'string' && userName) { %>
+              <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>
             <% } else { %>
-                <a class="nav-link" href="/users">
+              <a class="nav-link" href="/users/signin">Signin</a>
             <% } %>            
-                <i style="color:#66FCF1" class="fas fa-user-circle"></i> Users </a>
-            </a>
-          </li>
+          </li> 
 
 
         </ul>

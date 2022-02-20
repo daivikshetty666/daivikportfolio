@@ -19,7 +19,8 @@ exports.list = function(req, res, next){
                 'inventory/list', 
                 { 
                     title: 'Business Contact List',
-                    InventoryList: inventoryList
+                    InventoryList: inventoryList,
+                    userName: req.user ? req.user.username : ''
                 }
             );
         }
@@ -34,7 +35,8 @@ module.exports.displayAddPage = (req, res, next) => {
         'inventory/add_edit', 
         {
             title: 'Add New Business Contact',
-            item: newItem
+            item: newItem,
+            userName: req.user ? req.user.username : ''
         }
     )          
 }
@@ -80,7 +82,8 @@ module.exports.displayEditPage = (req, res, next) => {
                 'inventory/add_edit', 
                 {
                     title: 'Edit Business Contact', 
-                    item: itemToEdit
+                    item: itemToEdit,
+                    userName: req.user ? req.user.username : ''
                 }
             )
         }

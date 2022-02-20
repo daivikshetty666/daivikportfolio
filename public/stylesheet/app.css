@@ -5,7 +5,9 @@ Student Id - 301236856
 CSS file
 */
 
-
+.flash{
+  color: red;
+}
 
 body {
   padding-top: 50px;
@@ -176,4 +178,3 @@ input[type=submit] {
   font-size:13px;
   margin-bottom:0;
 }
-
