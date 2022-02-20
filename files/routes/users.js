@@ -6,7 +6,7 @@ let userController = require('../controllers/user')
 router.get('/', userController.user);
 
 /* GET users listing. */
-router.get('/julio', userController.julio);
+router.get('/daivik', userController.julio);
 
 
 //signup get method
