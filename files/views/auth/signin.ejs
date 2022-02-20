@@ -1,32 +1,30 @@
 <% include ../partials/header.ejs %>
 <div class="jumbotron" style="background-color:#171d25">
     <div class="jumbotron" style="background-color:#11161b">
-<div class="container">
+<div class="container" style="color:rgb(170, 255, 255)">
     <div class="row">
 
-        <div class="offset-md-3 col-md-3">
-            <h1><%= title %></h1>
+        <div class="offset-md-4 col-md-5">
+            <h1 align="center" style="color: aqua;">Login Page</h1>
             <% for(var i in messages) { %>
                 <div class="flash"><%= messages[i] %></div>
             <% } %>
             <form action="/users/signin" method="post">
                 <div class="form-group">
-                    <label>Username:</label>
-                    <input type="text" name="username" class="form-control" />
+                    <label>Username:</label><input type="text" name="username" class="form-control" placeholder="Enter username"/>
                 </div>
                 <div class="form-group">
-                    <label>Password:</label>
-                    <input type="password" name="password" class="form-control"/>
+                    <label>Password:</label><input type="password" name="password" class="form-control" placeholder="Enter password"/>
                 </div>
                 <br>
-                <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="Sign In" />                    
+                <div align="center" class="form-group">
+                    <input class="btn btn-info" type="submit" value="Login" />                    
                 </div>
                 <br>
-                <div class="form-group">
-                    <a href="/users/signup" style="text-decoration: none">                
+                <div align='center' class="form-group">
+                    <a href="/users/signup" >                
                         <i class="fas fa-user-plus"></i> 
-                        Sign-up
+                        Register
                     </a>
                 </div>
             </form>
